@@ -1,7 +1,7 @@
 {
   "name": "react-modal-sgg",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "Simple modal component for React",
   "author": "TheCatIsOnTheMoon",
   "license": "MIT",
   "repository": "TheCatIsOnTheMoon/react-modal-sgg",
