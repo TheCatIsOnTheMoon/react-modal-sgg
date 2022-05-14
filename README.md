@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-modal-sgg.svg)](https://www.npmjs.com/package/react-modal-sgg) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-First try to create my own npm package, a simple modal componant. Intending to serve my learning proccess it has very little use in a real project.
+First try to create my own npm package, a simple modal componant. Intending to serve my learning proccess.
 
 ## Install
 
@@ -12,19 +12,32 @@ First try to create my own npm package, a simple modal componant. Intending to s
 npm install --save react-modal-sgg
 ```
 
-## Usage
+## Use exemple
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import Modal from 'react-modal-sgg'
 
-import MyComponent from 'react-modal-sgg'
-import 'react-modal-sgg/dist/index.css'
+const App = () => {
+  const [showModal, setShowModal] = useState(false)
+  const hideModal = () => showModal && setShowModal(false)
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+  return (
+    <div>
+    
+      <button onClick={() => setShowModal(true)}>
+        Show Modal
+      </button>
+      
+      <Modal show={showModal} onClickCloseBtn={hideModal}>
+        <h1>Modal text</h1>
+      </Modal>
+      
+    </div>
+  )
 }
+
+export default App
 ```
 
 ## License
